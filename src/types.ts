@@ -112,6 +112,16 @@ export interface TimelineEntry {
   clockSeconds: number;
 }
 
+export interface LiveAdvisoryData {
+  situationAssessment: string;
+  primaryPriority: string;
+  recommendedSequence: string;
+  majorTradeoff: string;
+  whyThisPlan: string;
+  humanDecisionRequired: string;
+  provider: string;
+}
+
 export interface SimulationState {
   incidentState: IncidentState;
   scenario: 'hurricane';
@@ -143,6 +153,11 @@ export interface SimulationState {
   /* Tier 2A UI state */
   selectedAssetId: number | null;
   gridFilter: string;
+  /* Live Advisory */
+  liveAdvisory: LiveAdvisoryData | null;
+  advisoryLoading: boolean;
+  advisoryError: boolean;
+  llmRequestAttempted: boolean;
 }
 
 export type SimulationAction =
@@ -156,4 +171,8 @@ export type SimulationAction =
   | { type: 'APPROVE_RECOVERY' }
   | { type: 'EXPAND_AGENT'; agentId: number }
   | { type: 'SELECT_ASSET'; assetId: number | null }
-  | { type: 'SET_GRID_FILTER'; filter: string };
+  | { type: 'SET_GRID_FILTER'; filter: string }
+  /* Live Advisory actions */
+  | { type: 'SET_LIVE_ADVISORY'; advisory: LiveAdvisoryData }
+  | { type: 'SET_ADVISORY_LOADING' }
+  | { type: 'SET_ADVISORY_ERROR' };

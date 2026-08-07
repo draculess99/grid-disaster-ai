@@ -38,6 +38,10 @@ function createInitialState(): SimulationState {
     conflictsLogged: false,
     selectedAssetId: null,
     gridFilter: 'ALL',
+    liveAdvisory: null,
+    advisoryLoading: false,
+    advisoryError: false,
+    llmRequestAttempted: false,
   };
 }
 
@@ -171,6 +175,19 @@ export function simulationReducer(state: SimulationState, action: SimulationActi
 
     case 'SET_GRID_FILTER': {
       return { ...state, gridFilter: action.filter };
+    }
+
+    /* Live Advisory reducer cases */
+    case 'SET_LIVE_ADVISORY': {
+      return { ...state, liveAdvisory: action.advisory, advisoryLoading: false, advisoryError: false };
+    }
+
+    case 'SET_ADVISORY_LOADING': {
+      return { ...state, advisoryLoading: true, advisoryError: false, llmRequestAttempted: true };
+    }
+
+    case 'SET_ADVISORY_ERROR': {
+      return { ...state, advisoryLoading: false, advisoryError: true };
     }
 
     case 'TICK': {
