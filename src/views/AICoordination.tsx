@@ -138,7 +138,7 @@ function AdvisoryPanel() {
           )}
           {liveAdvisory && (
             <span className="text-[8px] font-bold text-[#22c55e] bg-[#22c55e]/10 border border-[#22c55e]/30 rounded px-1.5 py-0.5 uppercase tracking-wider">
-              {liveAdvisory.provider === 'groq' ? 'Groq LLM' : 'LLM'} · Generated
+              LIVE LLM · Powered by Groq
             </span>
           )}
         </div>
@@ -178,6 +178,11 @@ function AdvisoryPanel() {
       {/* Result state */}
       {liveAdvisory && !advisoryLoading && (
         <div className="space-y-3">
+          <div className="bg-[#8b5cf6]/10 border border-[#8b5cf6]/40 rounded px-3 py-2">
+            <p className="text-[10px] font-bold text-[#c4b5fd] tracking-wider text-center">
+              AI-GENERATED ADVISORY — HUMAN AUTHORIZATION REQUIRED
+            </p>
+          </div>
           <div>
             <div className="text-[9px] text-[#8b5cf6] font-bold tracking-wider mb-1">SITUATION ASSESSMENT</div>
             <p className="text-xs text-[#e2e8f0] leading-relaxed">{liveAdvisory.situationAssessment}</p>
