@@ -2,55 +2,33 @@
 
 **Predict the cascade. Protect the critical. Restore the grid.**
 
-Grid Disaster AI is a human-governed emergency command center that simulates cascading electrical-grid failures, predicts which infrastructure is likely to fail next, coordinates specialist AI agents with competing priorities, and produces a recovery plan that requires human authorization before execution.
-
----
-
-## The Problem
-
-Major grid incidents rarely remain isolated.
-
-A damaged transmission corridor can overload neighboring substations, interrupt hospitals, threaten water systems, disrupt communications, and leave hundreds of thousands of people without electricity.
-
-Emergency operators must answer several questions simultaneously:
-
-- What is failing now?
-- What is likely to fail next?
-- Which infrastructure is most critical?
-- Which response protects the greatest number of people?
-- What tradeoffs are being made?
-- Who has authority to approve the final action?
-
-Grid Disaster AI turns those questions into one coordinated operational workflow.
-
----
+Grid Disaster AI is a human-governed emergency command center for cascading electrical-grid disasters. It combines deterministic grid-failure simulation and risk forecasting with a live LLM-powered Recovery Commander advisory, while keeping final authority with a human incident commander.
 
 ## Core Demo
 
-The primary scenario is a:
+The primary scenario is:
 
 **Category 4 Hurricane — Catastrophic Severity — Night**
 
-The demonstration follows this sequence:
+The demo follows this sequence:
 
-**MONITORING**
-→ **DISASTER**
-→ **CASCADING FAILURE**
-→ **CRITICAL INFRASTRUCTURE AT RISK**
-→ **AI ANALYSIS**
-→ **AGENT DISAGREEMENT**
-→ **RECOVERY COMMANDER**
-→ **HUMAN AUTHORIZATION**
-→ **RECOVERY**
-→ **STABILIZED**
+**MONITORING → DISASTER → CASCADE → CRITICAL INFRASTRUCTURE AT RISK → AI COORDINATION → AGENT DISAGREEMENT → LIVE GROQ ADVISORY → HUMAN AUTHORIZATION → RECOVERY → STABILIZED**
 
----
+## What the System Does
 
-## Key Features
+Grid Disaster AI helps answer:
 
-### Command Center
+- What is failing now?
+- What is likely to fail next?
+- Which hospitals and critical facilities are most exposed?
+- What tradeoffs exist between grid stability and public safety?
+- How should crews and mobile generation be prioritized?
+- What does a live LLM recommend after specialist agents disagree?
+- Has a human explicitly authorized the recovery plan?
 
-Provides a live operational overview including:
+## Command Center
+
+The Command Center provides a live operational overview including:
 
 - Grid Stability
 - Customers Without Power
@@ -60,26 +38,28 @@ Provides a live operational overview including:
 - Repair Crews Available
 - Mobile Generators Available
 - Highest-Risk Facility
+- Cascading Failure Forecast
+- Lives and Infrastructure at Immediate Risk
 
-During the hurricane scenario, the grid can deteriorate from approximately:
+A representative hurricane run can move from:
 
-- 96% grid stability
-- 0 customers without power
-- 0 critical facilities at risk
+- Grid Stability: 96%
+- Customers Without Power: 0
+- Critical Facilities at Risk: 0
 
-to an emergency state of approximately:
+to approximately:
 
-- 46% grid stability
-- 462,840 customers without power
-- 8 critical facilities at risk
-- 81% cascade probability
-- 26–34 hour estimated restoration time
+- Grid Stability: 46%
+- Customers Without Power: 462,840
+- Critical Facilities at Risk: 8
+- Cascade Probability: 81%
+- Estimated Restoration: 26–34 hours
 
----
+After recovery, the incident reaches **STABILIZED / RESOLVED**, Cascade Probability falls to 0%, and critical facilities are protected.
 
 ## Cascading Failure Forecast
 
-Grid Disaster AI forecasts secondary failures across multiple time horizons:
+Grid Disaster AI predicts secondary failures across:
 
 - NOW
 - NEXT 15 MINUTES
@@ -87,27 +67,20 @@ Grid Disaster AI forecasts secondary failures across multiple time horizons:
 
 Predictions can include:
 
-- Asset name
+- Asset
 - Failure probability
 - Estimated time to failure
 - Population impact
-- Critical dependencies
+- Critical dependency
 - Risk severity
 
-Example predicted risks include:
-
-- East Junction
-- Metro Distribution Hub
-- North Water Treatment Plant
-- Saint Anne Medical Center
-
----
+Example forecast risks include East Junction, Metro Distribution Hub, North Water Treatment Plant, and Saint Anne Medical Center.
 
 ## Lives and Infrastructure at Immediate Risk
 
-Critical infrastructure is dynamically ranked according to operational risk.
+Critical infrastructure is dynamically ranked during an active incident.
 
-Facilities include:
+Representative facilities include:
 
 - Saint Anne Medical Center
 - North Water Treatment Plant
@@ -116,29 +89,16 @@ Facilities include:
 - Riverside Emergency Shelter
 - Regional Trauma Hospital
 
-The system evaluates information such as:
-
-- Current state
-- People affected
-- Backup-power availability
-- Risk score
-- Priority level
-
-When the incident reaches STABILIZED, the system reports that critical infrastructure is protected rather than continuing to display an active emergency ranking.
-
----
+When the incident is stabilized, the active-risk panel clears and reports that critical infrastructure is protected.
 
 ## Grid Network
 
-The Grid Network provides a visual schematic of generation, transmission, distribution, and critical infrastructure.
+The Grid Network visualizes generation, substations, distribution, and critical facilities.
 
-Example assets include:
+Example grid assets:
 
-### Generation
 - North Ridge Generation
 - Harbor Gas Plant
-
-### Grid Infrastructure
 - Central Substation
 - East Junction
 - West Valley
@@ -146,15 +106,9 @@ Example assets include:
 - Metro Distribution Hub
 - Coastal Transfer Station
 
-### Critical Infrastructure
-- Saint Anne Medical Center
-- Regional Trauma Hospital
-- Children's Medical Center
-- North Water Treatment Plant
-- Metro Communications Hub
-- Riverside Emergency Shelter
+Critical infrastructure includes hospitals, water treatment, communications, and emergency shelter assets.
 
-Assets transition through operational states such as:
+Asset states include:
 
 - Operational
 - Stressed
@@ -164,11 +118,9 @@ Assets transition through operational states such as:
 - Restoring
 - Restored
 
----
+### Grid Filters
 
-## Grid Filters
-
-Operators can isolate important infrastructure using:
+Operators can filter the network by:
 
 - ALL
 - FAILED
@@ -176,107 +128,153 @@ Operators can isolate important infrastructure using:
 - CRITICAL
 - RESTORED
 
-Filtering changes only the visualization and does not modify the underlying simulation state.
+Filtering affects visualization only and does not change simulation state.
 
----
+### Interactive Asset Details
 
-## Interactive Asset Intelligence
+Clicking an asset opens operational details such as:
 
-Grid assets are clickable.
-
-The Asset Details panel provides operational information including:
-
-- Asset name
-- Asset type
 - Current status
 - Capacity
 - Current load
 - Population served
 - Dependencies
 - Risk score
-- Predicted failure status/time
+- Predicted failure time/status
 - Recommended response
 
-Asset information changes according to the current simulation state.
+## Deterministic Specialist Agents
 
----
-
-## Multi-Agent Coordination
-
-Grid Disaster AI uses specialist decision perspectives to evaluate the emergency.
+Grid Disaster AI uses several specialist decision perspectives:
 
 ### Grid Stability Agent
-
 Focuses on preventing broader grid collapse.
 
 ### Critical Infrastructure Agent
-
 Prioritizes hospitals, water treatment, communications, and other essential services.
 
 ### Public Safety Agent
-
-Evaluates population impact and community risk.
+Evaluates population exposure and community consequences.
 
 ### Repair and Resources Agent
+Evaluates crews, generators, repair priorities, and resource constraints.
 
-Evaluates crews, generators, repair priorities, and operational resources.
+### Deterministic Recovery Commander
+Reconciles specialist recommendations into a safe fallback recovery strategy.
 
-### Recovery Commander
+The specialists are intentionally allowed to disagree so tradeoffs remain visible.
 
-Reconciles competing recommendations and creates one coordinated recovery strategy.
+## Live Recovery Commander Advisory
 
----
+At the AI Coordination stage, Grid Disaster AI makes one live LLM request through a secure server-side integration.
 
-## Agent Disagreement
+The interface clearly identifies:
 
-The agents are intentionally allowed to disagree.
+**LIVE RECOVERY COMMANDER ADVISORY**  
+**LIVE LLM · Powered by Groq**  
+**AI-GENERATED ADVISORY — HUMAN AUTHORIZATION REQUIRED**
 
-For example:
+The advisory synthesizes the incident snapshot and specialist-agent recommendations into:
 
-**Grid Stability Agent**
+1. Situation Assessment
+2. Primary Priority
+3. Recommended Sequence
+4. Major Tradeoff
+5. Why This Plan
+6. Human Decision Required
 
-May recommend immediately isolating the eastern grid zone to stop further cascading failures.
+The live advisory is supplemental. It never directly controls the simulation.
 
-**Public Safety Agent**
+## Real LLM Architecture
 
-May warn that isolation would disconnect approximately 82,000 residents.
+The LLM path is:
 
-**Critical Infrastructure Agent**
+```text
+Native.builder React Application
+        |
+        v
+Deterministic Grid Simulation
+        |
+        v
+Specialist Agent Recommendations
+        |
+        v
+Compact Incident Snapshot
+        |
+        v
+Supabase Edge Function
+recovery-commander
+        |
+        v
+Groq API
+openai/gpt-oss-120b
+        |
+        v
+Live Recovery Commander Advisory
+        |
+        v
+Human Authorization Gate
+        |
+        v
+Existing Deterministic Recovery
+```
 
-May identify Saint Anne Medical Center as being inside the affected zone with limited backup-power time.
+### Why Supabase?
 
-**Repair and Resources Agent**
+The Groq API key is stored as a Supabase Edge Function secret named:
 
-May recommend deploying mobile generation before grid isolation.
+`GROQ_API_KEY`
 
-The **Recovery Commander** reconciles these competing priorities into a coordinated plan.
+The secret is never stored in React/browser code, committed to GitHub, or returned to the client.
 
-This makes the decision process visible rather than presenting AI output as an unexplained answer.
+### One-Call Guard
 
----
+The live Groq advisory is requested only once per disaster simulation.
+
+The advisory and request-attempt state are stored in shared application state so that:
+
+- React rerenders do not generate extra LLM calls
+- navigating away from AI Coordination does not generate another call
+- returning to AI Coordination reuses the existing advisory
+- RESET SIMULATION clears the advisory state so the next disaster may make one fresh request
+
+## Fail-Safe Design
+
+The live LLM is intentionally non-critical to application execution.
+
+If Groq, Supabase, the API key, rate limits, or inference fail, Grid Disaster AI continues using the deterministic Recovery Commander.
+
+The LLM can never:
+
+- authorize recovery
+- execute recovery actions
+- change grid assets
+- change simulation metrics
+- bypass the human confirmation checkbox
+- determine whether recovery approval is enabled
+
+The deterministic system remains the authoritative fail-safe.
 
 ## Human-Governed AI
 
-Grid Disaster AI does not allow the AI system to automatically execute a high-impact recovery decision.
-
-The workflow reaches:
+The system reaches:
 
 **AWAITING HUMAN AUTHORIZATION**
 
-The incident commander must explicitly confirm authorization before the recovery plan can execute.
+before recovery can begin.
 
-This demonstrates a core principle of the project:
+The incident commander must explicitly confirm authorization before the recovery sequence can execute.
+
+The design principle is:
 
 > AI can analyze, predict, coordinate, and recommend — but accountable human operators retain final authority.
 
----
-
 ## Recovery Strategy
 
-A recovery plan may include actions such as:
+A representative recovery plan can include:
 
 1. Deploy mobile generation to Saint Anne Medical Center
-2. Preserve electrical service to North Water Treatment Plant
+2. Preserve service to North Water Treatment Plant
 3. Isolate the damaged coastal transmission corridor
 4. Reroute available power through Central Substation
 5. Dispatch Crew Alpha to East Junction
@@ -285,85 +283,98 @@ A recovery plan may include actions such as:
 8. Issue emergency public alerts
 9. Continuously reassess grid stability
 
-Recovery actions progress through their operational lifecycle until completion.
-
----
-
-## Stabilization
-
-After authorized recovery:
-
-- Grid Stability improves to approximately 78%
-- Facilities at Risk falls to 0
-- Cascade Probability falls to 0%
-- Highest-Risk Facility becomes None
-- Critical infrastructure is protected
-- Estimated restoration time improves
-- Grid assets transition toward restored status
-
-The incident ends in:
-
-**STABILIZED / RESOLVED**
-
----
-
 ## Incident Timeline
 
-Grid Disaster AI maintains an incident timeline containing key events such as:
+The Incident Timeline records important events such as:
 
 - Initial disaster
 - Asset failures
 - Cascading impacts
-- AI analysis
-- Agent recommendations
-- Conflicting recommendations
+- Forecast updates
+- Specialist recommendations
+- Agent conflict
+- Live LLM advisory
 - Human authorization
 - Crew deployments
 - Infrastructure protection
 - Recovery actions
 - Stabilization
 
-This provides an auditable operational history of the response.
+## Application Views
+
+1. Command Center
+2. Grid Network
+3. AI Coordination
+4. Recovery Plan
+5. Incident Timeline
+
+Shared application state is preserved across navigation.
+
+## Technology
+
+- Native.builder
+- React
+- TypeScript
+- Vite
+- Supabase Edge Functions
+- Groq API
+- `openai/gpt-oss-120b`
+- Deterministic local simulation and risk logic
+- SVG-style grid visualization
+- Human-in-the-loop authorization
+
+No database is required for the core demo.
+
+## Reset and Reproducibility
+
+RESET SIMULATION restores the normal monitoring state:
+
+- MONITORING
+- Clock 00:00
+- Grid Stability 96%
+- Customers Without Power 0
+- Facilities at Risk 0
+- Cascade Probability 2%
+- Normal grid asset states
+- Cleared forecasts and risk rankings
+- Cleared live LLM advisory state
+
+This makes the demo reproducible.
+
+## QA Status
+
+Manual end-to-end testing has verified:
+
+- Disaster simulation
+- Cascading failures
+- Forecasting
+- Critical-infrastructure ranking
+- Grid filters
+- Asset details
+- Navigation state preservation
+- Specialist-agent coordination
+- Agent disagreement
+- Live Groq advisory
+- One-call-per-disaster LLM guard
+- Human authorization
+- Recovery actions
+- STABILIZED state
+- Reset behavior
+
+See `docs/QA_CHECKLIST.md`.
+
+## Demo
+
+The recommended three-minute presentation sequence is in:
+
+`docs/DEMO.md`
+
+## Safety and Scope
+
+Grid Disaster AI is a hackathon prototype and decision-support simulation. It does not control real electrical infrastructure and should not be used for real-world emergency operations without appropriate engineering validation, operational data integration, cybersecurity controls, testing, and regulatory oversight.
 
 ---
 
-## Architecture
+# Grid Disaster AI
 
-Grid Disaster AI is designed as a deterministic hackathon simulation that does not depend on external infrastructure.
-
-```text
-Category 4 Hurricane Scenario
-            |
-            v
-     Simulation State
-            |
-            v
-   Cascading Grid Model
-            |
-      +-----+------+
-      |            |
-      v            v
-Grid Network   Risk Forecasting
-      |            |
-      +------+-----+
-             |
-             v
-      Specialist Agents
-             |
-             v
-       Agent Conflict
-             |
-             v
-     Recovery Commander
-             |
-             v
-   Human Authorization Gate
-             |
-             v
-      Recovery Actions
-             |
-             v
-    STABILIZED / RESOLVED
-             |
-             v
-      Incident Timeline
+**Predict the cascade. Protect the critical. Restore the grid.**

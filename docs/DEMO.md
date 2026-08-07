@@ -1,213 +1,257 @@
-# Grid Disaster AI — 3-Minute Demo Runbook
+Grid Disaster AI — 3-Minute Demo Runbook
 
-## Goal
-Show one clear story:
+Demo Goal
 
-DISASTER
-→ CASCADE
-→ CRITICAL INFRASTRUCTURE AT RISK
-→ AI AGENTS DISAGREE
-→ RECOVERY COMMANDER COORDINATES
-→ HUMAN AUTHORIZES
-→ GRID RECOVERS
+Tell one clear story:
 
----
+DISASTER → CASCADE → CRITICAL INFRASTRUCTURE AT RISK → AGENTS DISAGREE → LIVE GROQ ADVISORY → HUMAN AUTHORIZES → GRID RECOVERS
 
-## 0:00–0:20 — Introduce the problem
+Before Recording
 
-Start on:
-COMMAND CENTER
+Reset Simulation
+
+Confirm MONITORING
+
+Confirm Grid Stability = 96%
+
+Confirm Customers Without Power = 0
+
+Confirm Facilities at Risk = 0
+
+Confirm Category 4 Hurricane
+
+Confirm Catastrophic severity
+
+Confirm Night
+
+Confirm Groq/Supabase integration is available
+
+Close unnecessary browser tabs
+
+Test one complete run before recording
+
+Reset again immediately before recording
+
+0:00–0:20 — Introduce the Problem
+
+Start on Command Center.
 
 Say:
 
-“Grid Disaster AI is a human-governed emergency command center for electrical-grid disasters.
-
-A localized grid failure can become a regional emergency within minutes, threatening hospitals, water systems, communications, and hundreds of thousands of people.”
+“Grid Disaster AI is a human-governed emergency command center for cascading electrical-grid disasters. A localized failure can threaten hospitals, water systems, communications, and hundreds of thousands of people within minutes.”
 
 Point out:
 
-- Grid Stability: 96%
-- Customers Without Power: 0
-- Critical Facilities at Risk: 0
-- Status: MONITORING
+MONITORING
 
----
+Grid Stability: 96%
 
-## 0:20–0:45 — Start the disaster
+Customers Without Power: 0
+
+Critical Facilities at Risk: 0
+
+0:20–0:45 — Trigger the Disaster
 
 Use:
 
 Category 4 Hurricane
-Severity: Catastrophic
-Time: Night
 
-Click:
+Catastrophic
 
-RUN DISASTER SIMULATION
+Night
 
-Say:
-
-“A Category 4 hurricane damages the coastal transmission corridor.
-
-Grid Disaster AI now simulates how that initial failure propagates through the interconnected grid.”
-
----
-
-## 0:45–1:15 — Show the cascade
-
-Open:
-GRID NETWORK
-
-Show assets changing state.
-
-Point out examples such as:
-
-- Coastal Transfer Station failing
-- East Junction failing or overloading
-- Metro Distribution Hub becoming overloaded
-- Saint Anne Medical Center becoming stressed
-- Water Treatment becoming endangered
-- Communications infrastructure becoming stressed
+Click RUN DISASTER SIMULATION.
 
 Say:
 
-“This is the key problem.
+“A Category 4 hurricane damages the coastal transmission corridor. Grid Disaster AI now models how that initial failure propagates through the interconnected grid.”
 
-One local infrastructure failure is becoming a regional cascade.
+0:45–1:10 — Show the Cascade
 
-The system tracks dependencies between generation, substations, hospitals, water, and communications.”
-
-If Tier 2A is available, briefly show:
-
-- Cascade Probability
-- Cascading Failure Forecast
-- Highest-Risk Facility
-- Lives and Infrastructure at Immediate Risk
-
----
-
-## 1:15–1:50 — Show AI coordination
-
-Open:
-AI COORDINATION
-
-Point out the five agents:
-
-1. Grid Stability Agent
-2. Critical Infrastructure Agent
-3. Public Safety Agent
-4. Repair and Resources Agent
-5. Recovery Commander Agent
-
-Say:
-
-“These agents have different objectives, so they do not automatically agree.”
-
-Show the conflict:
-
-Grid Stability Agent:
-Isolate the eastern zone immediately to prevent regional collapse.
-
-Public Safety Agent:
-That would remove power from about 82,000 residents.
-
-Critical Infrastructure Agent:
-Saint Anne Medical Center is inside that zone and has only about 42 minutes of backup power.
-
-Repair and Resources Agent:
-Deploy emergency generation to the hospital before isolation.
-
-Then point to the Recovery Commander.
-
-Say:
-
-“The Recovery Commander resolves those competing priorities and produces one coordinated recovery strategy.”
-
----
-
-## 1:50–2:25 — Show human governance
-
-Open:
-RECOVERY PLAN
-
-Say:
-
-“But AI does not automatically execute a high-impact infrastructure decision.”
+Open Grid Network.
 
 Show:
 
-HUMAN AUTHORIZATION REQUIRED
+failed assets
 
-Point out that approval requires the confirmation checkbox.
+overloaded assets
 
-Check:
+stressed critical infrastructure
 
-“I understand the operational impact and authorize this recovery plan.”
+transmission-path changes
+
+Briefly demonstrate a filter such as FAILED or AT RISK.
+
+If time permits, click one asset to show live operational details.
 
 Say:
 
-“The human incident commander remains accountable for the final decision.”
+“The system tracks how one local failure becomes a regional cascade and exposes dependencies between generation, substations, hospitals, water, and communications.”
 
-Click:
+1:10–1:30 — Show Prediction and Risk
 
-APPROVE RECOVERY PLAN
+Return briefly to Command Center.
 
----
+Point out:
 
-## 2:25–2:50 — Show recovery
+Cascade Probability
+
+Cascading Failure Forecast
+
+Highest-Risk Facility
+
+Lives and Infrastructure at Immediate Risk
+
+Say:
+
+“The system is not only showing what has failed. It is forecasting what is likely to fail next and prioritizing the infrastructure with the greatest life-safety impact.”
+
+1:30–2:10 — Show AI Coordination + Real LLM
+
+Open AI Coordination.
+
+Show the deterministic specialist agents and their competing priorities.
+
+Explain the conflict:
+
+Grid Stability wants isolation to prevent broader collapse
+
+Public Safety warns about population impact
+
+Critical Infrastructure prioritizes Saint Anne Medical Center
+
+Repair and Resources prioritizes feasible crew and generator deployment
+
+Then point to:
+
+LIVE RECOVERY COMMANDER ADVISORYLIVE LLM · Powered by GroqAI-GENERATED ADVISORY — HUMAN AUTHORIZATION REQUIRED
+
+Say:
+
+“The specialist agents are deterministic and auditable. Their incident snapshot is then sent through a secure Supabase Edge Function to a live Groq model, which synthesizes the competing recommendations into an advisory.”
+
+Briefly show:
+
+Situation Assessment
+
+Primary Priority
+
+Recommended Sequence
+
+Major Tradeoff
+
+Why This Plan
+
+Human Decision Required
+
+Then say:
+
+“The LLM is advisory only. It cannot execute recovery or bypass the human operator.”
+
+2:10–2:35 — Human Authorization
+
+Open Recovery Plan.
+
+Say:
+
+“Even after the AI produces a coordinated strategy, recovery cannot execute automatically.”
+
+Show HUMAN AUTHORIZATION REQUIRED.
+
+Check the authorization box.
+
+Say:
+
+“The incident commander remains accountable for the final decision.”
+
+Click APPROVE RECOVERY PLAN.
+
+2:35–2:52 — Show Recovery
 
 Watch the recovery sequence.
 
 Point out:
 
-- actions moving to Authorized
-- actions becoming In Progress
-- actions becoming Completed
-- critical infrastructure being protected
-- customers without power decreasing
-- grid stability rising
-- status reaching STABILIZED
+actions becoming authorized
+
+actions moving in progress
+
+actions completing
+
+Grid Stability improving
+
+Facilities at Risk falling
+
+Cascade Probability falling
+
+final status reaching STABILIZED / RESOLVED
 
 Say:
 
-“Once authorized, Grid Disaster AI executes the coordinated recovery sequence and continuously updates the operational picture.”
+“Once authorized, the system executes the deterministic recovery sequence and updates the operational picture.”
 
----
+2:52–3:00 — Close
 
-## 2:50–3:00 — Finish
-
-Briefly show:
-INCIDENT TIMELINE
+Briefly show Incident Timeline if time allows.
 
 Say:
 
-“Every prediction, AI recommendation, human decision, and recovery action is auditable.
+“Every prediction, specialist recommendation, live LLM advisory, human decision, and recovery action is auditable.
 
-Grid Disaster AI:
+Grid Disaster AI: Predict the cascade. Protect the critical. Restore the grid.”
 
-Predict the cascade.
-Protect the critical.
-Restore the grid.”
+What Judges Should Remember
 
-END.
+Do not try to demonstrate every feature.
 
-# Before Recording Checklist
+The five ideas to make memorable are:
 
-- Reset Simulation
-- Confirm MONITORING
-- Confirm Grid Stability = 96%
-- Confirm Customers Without Power = 0
-- Confirm Category 4 Hurricane
-- Confirm Catastrophic
-- Confirm Night
-- Test Run Disaster Simulation
-- Test Grid Network cascade
-- Test AI Coordination
-- Test Recovery Plan
-- Test authorization checkbox
-- Test Approve Recovery Plan
-- Confirm final status reaches STABILIZED
-- Test Incident Timeline
-- Reset again before recording
-- Close unnecessary browser tabs
-- Do not demonstrate unfinished features
+Cascading grid failure
+
+Critical infrastructure at risk
+
+Specialist agents with competing priorities
+
+Real Groq LLM advisory with mandatory human authorization
+
+Grid recovery to STABILIZED
+
+Architecture Line for Q&A
+
+If asked how the AI works:
+
+“Grid Disaster AI combines a deterministic grid simulation and specialist-agent layer with one live Groq inference per disaster. The incident snapshot is sent through a Supabase Edge Function so the Groq API key stays server-side. The live advisory is cached for the incident, and the deterministic Recovery Commander remains the fail-safe. Only a human can authorize recovery.”
+
+Fail-Safe Line for Q&A
+
+If asked what happens when the LLM fails:
+
+“The live LLM is non-critical. If Groq or the network is unavailable, Grid Disaster AI immediately continues with the deterministic Recovery Commander. The AI advisory never controls execution.”
+
+Recording Safety Checklist
+
+Reset before recording
+
+MONITORING / 96% / 0 outages
+
+Category 4 Hurricane selected
+
+Run disaster once
+
+Grid cascade visible
+
+Forecast/risk panels populated
+
+AI Coordination populated
+
+LIVE LLM · Powered by Groq visible
+
+Human authorization checkbox required
+
+Approve Recovery Plan works
+
+STABILIZED reached
+
+Incident Timeline populated
+
+No unfinished features shown
